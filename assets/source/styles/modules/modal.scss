@@ -1,0 +1,121 @@
+.modal {
+  display: none;
+  &.open {
+    display: flex;
+  }
+  .background {
+    background-color: $white;
+    opacity: .8;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .modal-content {
+    z-index: 5;
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    background-color: $white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 644px;
+    border: 1px solid $grey_border;
+    -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
+    @media (max-width: 1115px) {
+      left: 19%;
+    }
+    @media (max-width: 940px) {
+      left: 10%;
+    }
+    .left-part {
+      padding: 30px;
+      width: 386px;
+      h2 {
+        margin-bottom: 17px;
+      }
+      .new-card-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0 15px;
+      }
+      form {
+        input[type="text"] {
+          padding: 15px 0 15px 10px;
+          border-radius: 3px;
+          margin: 7px 0 7px;
+          font-size: 18px;
+          border: 1px solid $input_border;
+        }
+        .personal-about {
+          display: none;
+          &.show {
+            display: block;
+          }
+          .wrap-card-info {
+            display: flex;
+            justify-content: space-between;
+            .wrap-card-info--data {
+              display: flex;
+              justify-content: space-between;
+              width: 120px;
+              .number-card {
+                width: 50px;
+              }
+            }
+            .number-card-cvv {
+              width: 74px;
+              position: relative;
+            }
+          }
+          .wrap-example-number-card {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            .example-number-card {
+              width: 45px;
+              height: 30px;
+              display: block;
+              margin-right: 15px;
+            }
+          }
+          .personal-info {
+            width: 100%;
+          }
+        }
+        .wrap-checkbox {
+          margin: 10px 0 30px;
+        }
+      }
+    }
+    .right-part {
+      width: 292px;
+      padding-left: 25px;
+      background-color: $bg_light_grey;
+      position: relative;
+      .close-modal {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        right: 20px;
+        top: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .total {
+        position: absolute;
+        bottom: 0;
+        &__off {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}

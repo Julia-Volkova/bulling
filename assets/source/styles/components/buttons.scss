@@ -1,0 +1,44 @@
+.btn {
+  text-transform: uppercase;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 3px;
+  text-align: center;
+  width: 100%;
+  &_blue {
+    background-color: $blue;
+    border: none;
+    color: $white;
+    display: block;
+    padding: 17px 20px;
+    -webkit-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.4);
+    &:hover {
+      background-color: $light_blue;
+    }
+  }
+  &_white {
+    background-color: $white;
+    border: 1px solid $blue_border;
+    margin-top: 17px;
+    color: $blue_border;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+    span {
+      font-style: italic;
+      text-transform: lowercase;
+    }
+    img {
+      position: relative;
+      top: 4px;
+      left: 0;
+    }
+  }
+}
+
+

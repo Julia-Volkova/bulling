@@ -1,0 +1,111 @@
+/* Дефолтные стили */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-size-adjust: none;
+}
+
+//Шрифт
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+/* Формы */
+input, textarea, button {
+  font-family: $PTSans;
+}
+
+/* Аккуратные таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Основные стили */
+html {
+  background: rgba(255, 255, 255, 1);
+  height: 100%;
+}
+
+body {
+  font-family: $PTSans;
+  font-weight: 400;
+  height: 100%;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+}
+
+.line {
+  height: 1px;
+  background-color: $grey_line;
+}
+
+.clearix {
+  clear: both;
+}
+
+/* Ссылки без дефолтного подчёркивания */
+a {
+  text-decoration: none;
+}
+
+.total {
+  position: absolute;
+  bottom: 27px;
+  @media (max-width: 999px) {
+    right: 20px;
+  }
+  h1 {
+    color: $blue;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+
+  &__off {
+    color: $green;
+    padding-top: 5px;
+    padding-bottom: 11px;
+  }
+
+  .coupone {
+    font-size: 13px;
+    color: $grey_text;
+    border-bottom: 1px dotted $grey_dotted;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    &:hover {
+      color: $green;
+      border-bottom: 1px dotted $green;
+    }
+  }
+  .coupone-number {
+    display: none;
+    margin: 0 0 20px;
+    padding: 8px 0 8px 8px;
+    border-radius: 3px;
+    outline: none;
+
+    &.show {
+      display: block;
+      transition: 2s;
+    }
+  }
+}
+
+
