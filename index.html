@@ -4,7 +4,7 @@
   <title>Пробное</title>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/css/style.css?v=23c41146cd1f7285a3b4f51bd4c5a9f4" rel="stylesheet">
+    <link href="assets/css/style.css?v=b2c732b67e88b899485342a4755d243c" rel="stylesheet">
 </head>
 <body>
 
@@ -50,38 +50,38 @@
 
             <div class="tariffs">
                 <div class="tariff">
-                    <h3>none</h3>
-                    <span class="sale"></span>
-                    <span class="total-price"></span>
+                    <h3 class="js-time">none</h3>
+                    <span class="sale js-sale" data-time="1"></span>
+                    <span class="total-price js-time-price" data-time="1"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">6 month</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="6"></span>
                     <span class="total-price js-time-price" data-time="6"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">9 month</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="9"></span>
                     <span class="total-price js-time-price" data-time="9"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">1 year</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="12"></span>
                     <span class="total-price js-time-price" data-time="12"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">2 year</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="24"></span>
                     <span class="total-price js-time-price" data-time="24"></span>
 
                 </div>
 
                 <div class="switch">
-                    <input type="radio" name="tariff" id="radio-0" class="radiobutton">
+                    <input type="radio" name="tariff" id="radio-0" data-time="1" class="radiobutton js-time-change">
                     <label for="radio-0"> </label>
 
                     <input type="radio" name="tariff" id="radio-1" data-time="6" class="radiobutton js-time-change"
@@ -109,16 +109,16 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>3 regular</td>
-                    <td class="right-part">$6.99</td>
+                    <td><span class="js-license-count-value"></span> lic</td>
+                    <td class="right-part">$5.99</td>
                 </tr>
                 <tr>
                     <td>Summary:</td>
-                    <td class="right-part" colspan="2">8 licenses</td>
+                    <td class="right-part" colspan="2"><span class="js-license-count-value"></span> licenses</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td class="right-part" colspan="2">x $5.98/mo</td>
+                    <td class="right-part" colspan="2">x $5.99/mo</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -134,7 +134,9 @@
                 <h3>Total:</h3>
                 <h1 class="js-total-price"></h1>
 
-                <h3 class="total__off">$359.98 off</h3>
+                <h3 class="total__off js-total-sale"></h3>
+
+
                 <a class="coupone js-open-coupone-input" href="">I have a coupone</a>
 
                 <div class="wrap-coupone">
@@ -224,18 +226,21 @@
                 <form action="">
                     <div class="personal-about js-form">
 
-                        <input class="personal-info" type="text" placeholder="Number">
-                        <input class="personal-info" type="text" placeholder="Name on card">
+                        <input class="personal-info js-number js-number-new-card"
+                               pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" type="text" placeholder="Number">
+                        <input class="personal-info" maxlength="19" type="text" placeholder="Name on card">
+
                         <div class="wrap-card-info">
                             <div class="wrap-card-info--data">
-                                <input class="number-card" maxlength="2" type="text" placeholder="MM">
-                                <input class="number-card" maxlength="2" type="text" placeholder="YY">
+                                <input class="number-card js-number" maxlength="2" type="text" placeholder="MM">
+                                <input class="number-card js-number" maxlength="2" type="text" placeholder="YY">
                             </div>
-                            <input class="number-card-cvv" type="text" maxlength="3" placeholder="CVV">
+                            <input class="number-card-cvv js-number" type="text" maxlength="3" placeholder="CVV">
                         </div>
                         <div class="wrap-example-number-card">
                             <img src="./assets/img/card.png" alt="" class="example-number-card">
                         </div>
+
 
                     </div>
                     <div class="wrap-checkbox">
@@ -255,7 +260,7 @@
                     <h3>Total:</h3>
                     <h1 class="js-total-price"></h1>
 
-                    <h3 class="total__off">$359.98 off</h3>
+                    <h3 class="total__off js-total-sale"></h3>
                 </div>
             </div>
         </div>
@@ -264,6 +269,6 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<script src="assets/js/scripts.js?v=112c9807f47ebb70c1c951285a3f904d"></script>
+<script src="assets/js/scripts.js?v=5ebb90d3b77b2a5b10afb9c3076d5d26"></script>
 </body>
 </html>

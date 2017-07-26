@@ -102,21 +102,6 @@
         }
       }
     }
-    //&:focus {
-    //  & + .radio-label {
-    //    &:before {
-    //      outline: none;
-    //      border-color: $color2;
-    //    }
-    //  }
-    //}
-    // + .radio-label {
-    //  &:empty {
-    //    &:before {
-    //      margin-right: 0;
-    //    }
-    //  }
-    //}
   }
 }
 
@@ -182,7 +167,7 @@
       width: 106px;
       height: 141px;
       position: absolute;
-      top: -30px;
+      top: -44px;
       border: 2px solid $green;
       transition: 0.5s .05s ease-in-out;
     }
@@ -206,28 +191,23 @@
     }
 
     input#radio-0:checked ~ #border {
-      //left: 0;
-      transform: translate3d(-2.1rem, 0, 0);
+      left: -5%;
     }
     input#radio-1:checked ~ #border {
       //transform: translateX(0%);
-      //left: 20%;
-      transform: translate3d(145%, 0, 0);
+      left: 19%;
     }
     input#radio-2:checked ~ #border {
       //transform: translateX(40%);
-      //left: 40%;
-      transform: translate3d(5.5rem, 0, 0);
+      left: 43%;
     }
     input#radio-3:checked ~ #border {
       //transform: translateX(50%);
-      //left: 60%;
-      transform: translate3d(5.5rem, 0, 0);
+      left: 67%;
     }
     input#radio-4:checked ~ #border {
       //transform: translateX(75%);
-      //left: 80%;
-      transform: translate3d(5.5rem, 0, 0);
+      left: 90%;
     }
     input[type="radio"] {
       &:not(:checked),

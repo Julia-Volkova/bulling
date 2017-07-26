@@ -40,38 +40,38 @@
 
             <div class="tariffs">
                 <div class="tariff">
-                    <h3>none</h3>
-                    <span class="sale"></span>
-                    <span class="total-price"></span>
+                    <h3 class="js-time">none</h3>
+                    <span class="sale js-sale" data-time="1"></span>
+                    <span class="total-price js-time-price" data-time="1"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">6 month</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="6"></span>
                     <span class="total-price js-time-price" data-time="6"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">9 month</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="9"></span>
                     <span class="total-price js-time-price" data-time="9"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">1 year</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="12"></span>
                     <span class="total-price js-time-price" data-time="12"></span>
                 </div>
 
                 <div class="tariff">
                     <h3 class="js-time">2 year</h3>
-                    <span class="sale js-sale">$15</span>
+                    <span class="sale js-sale" data-time="24"></span>
                     <span class="total-price js-time-price" data-time="24"></span>
 
                 </div>
 
                 <div class="switch">
-                    <input type="radio" name="tariff" id="radio-0" class="radiobutton">
+                    <input type="radio" name="tariff" id="radio-0" data-time="1" class="radiobutton js-time-change">
                     <label for="radio-0"> </label>
 
                     <input type="radio" name="tariff" id="radio-1" data-time="6" class="radiobutton js-time-change"
@@ -99,16 +99,16 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>3 regular</td>
-                    <td class="right-part">$6.99</td>
+                    <td><span class="js-license-count-value"></span> lic</td>
+                    <td class="right-part">$5.99</td>
                 </tr>
                 <tr>
                     <td>Summary:</td>
-                    <td class="right-part" colspan="2">8 licenses</td>
+                    <td class="right-part" colspan="2"><span class="js-license-count-value"></span> licenses</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td class="right-part" colspan="2">x $5.98/mo</td>
+                    <td class="right-part" colspan="2">x $5.99/mo</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -124,7 +124,9 @@
                 <h3>Total:</h3>
                 <h1 class="js-total-price"></h1>
 
-                <h3 class="total__off">$359.98 off</h3>
+                <h3 class="total__off js-total-sale"></h3>
+
+
                 <a class="coupone js-open-coupone-input" href="">I have a coupone</a>
 
                 <div class="wrap-coupone">
