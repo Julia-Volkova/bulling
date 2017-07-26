@@ -7,7 +7,7 @@
 
         <div class="title-container__switch">
             <h3>Reccurement payment</h3>
-            <input type="radio" class="title-container__switch_icon" id="switch">
+            <input type="checkbox" class="title-container__switch_icon" id="switch">
             <label for="switch"></label>
         </div>
     </div>
@@ -40,11 +40,16 @@
 
             <div class="tariffs">
                 <div class="tariff">
+                    <h3>none</h3>
+                    <span class="sale"></span>
+                    <span class="total-price"></span>
+                </div>
+
+                <div class="tariff">
                     <h3 class="js-time">6 month</h3>
                     <span class="sale js-sale">$15</span>
                     <span class="total-price js-time-price" data-time="6"></span>
                 </div>
-
 
                 <div class="tariff">
                     <h3 class="js-time">9 month</h3>
@@ -66,6 +71,9 @@
                 </div>
 
                 <div class="switch">
+                    <input type="radio" name="tariff" id="radio-0" class="radiobutton">
+                    <label for="radio-0"> </label>
+
                     <input type="radio" name="tariff" id="radio-1" data-time="6" class="radiobutton js-time-change" checked>
                     <label for="radio-1"> </label>
 
@@ -78,10 +86,7 @@
                     <input type="radio" name="tariff" id="radio-4" data-time="24" class="radiobutton js-time-change">
                     <label for="radio-4" class="non-before"> </label>
 
-
-
                     <div id="border"></div>
-
                 </div>
             </div>
         </div>
@@ -126,7 +131,8 @@
         </div>
 
         <div class="orders">
-            <div class="btn btn_blue">Proceed to Checkout</div>
+
+            <div class="btn btn_blue js-modal-open">Proceed to Checkout</div>
             <h3>Your recent orders</h3>
             <div class="order">
                 <div class="order__item">

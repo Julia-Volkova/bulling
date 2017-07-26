@@ -1,4 +1,4 @@
-var btn_open_modal = document.querySelector('.js-modal-open');
+var btn_open_modal = document.querySelectorAll('.js-modal-open');
 var modal = document.querySelector('.js-modal');
 var background = document.querySelector('.js-background');
 var open_coupone_input = document.querySelector('.js-open-coupone-input');
@@ -8,7 +8,7 @@ var open_new_card = document.querySelector('.js-open-form');
 var new_card = document.querySelector('.js-form');
 var payment = document.querySelector('#payment');
 var initial_state = {
-    license: 1,
+    license: 3,
     cost: 5.99
 };
 var time = document.querySelectorAll('.js-time');
@@ -23,9 +23,11 @@ var radio = document.querySelectorAll('.js-time-change');
 
 license.innerHTML = initial_state.license;
 
-btn_open_modal.addEventListener('click', function (e) {
-    e.preventDefault();
-    modal.classList.add('open');
+btn_open_modal.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.add('open');
+    });
 });
 
 open_coupone_input.addEventListener('click', function (e) {

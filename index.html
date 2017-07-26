@@ -4,7 +4,7 @@
   <title>Пробное</title>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/css/style.css?v=96f64418413699e5cdc4b772565acd1e" rel="stylesheet">
+    <link href="assets/css/style.css?v=0473fb9f45b9db152f55ee77d0280995" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
 
         <div class="title-container__switch">
             <h3>Reccurement payment</h3>
-            <input type="radio" class="title-container__switch_icon" id="switch">
+            <input type="checkbox" class="title-container__switch_icon" id="switch">
             <label for="switch"></label>
         </div>
     </div>
@@ -50,11 +50,16 @@
 
             <div class="tariffs">
                 <div class="tariff">
+                    <h3>none</h3>
+                    <span class="sale"></span>
+                    <span class="total-price"></span>
+                </div>
+
+                <div class="tariff">
                     <h3 class="js-time">6 month</h3>
                     <span class="sale js-sale">$15</span>
                     <span class="total-price js-time-price" data-time="6"></span>
                 </div>
-
 
                 <div class="tariff">
                     <h3 class="js-time">9 month</h3>
@@ -76,6 +81,9 @@
                 </div>
 
                 <div class="switch">
+                    <input type="radio" name="tariff" id="radio-0" class="radiobutton">
+                    <label for="radio-0"> </label>
+
                     <input type="radio" name="tariff" id="radio-1" data-time="6" class="radiobutton js-time-change" checked>
                     <label for="radio-1"> </label>
 
@@ -88,10 +96,7 @@
                     <input type="radio" name="tariff" id="radio-4" data-time="24" class="radiobutton js-time-change">
                     <label for="radio-4" class="non-before"> </label>
 
-
-
                     <div id="border"></div>
-
                 </div>
             </div>
         </div>
@@ -121,7 +126,7 @@
                 <tr>
                     <td></td>
                     <td class="right-part total-text js-total-price" colspan="2"><h2> </h2></td>
-                    
+
                 </tr>
             </table>
             <div class="total">
@@ -136,7 +141,8 @@
         </div>
 
         <div class="orders">
-            <div class="btn btn_blue">Proceed to Checkout</div>
+            
+            <div class="btn btn_blue js-modal-open">Proceed to Checkout</div>
             <h3>Your recent orders</h3>
             <div class="order">
                 <div class="order__item">
@@ -225,7 +231,7 @@
                 </div>
                 <button class="js-send-form btn btn_blue" type="submit">Checkout</button>
                 <button class="js-send-form btn btn_white" type="submit"><span class="text">or </span> Pay with <img
-                            src="../assets/img/paypal.png"
+                            src="./assets/img/paypal.png"
                             alt=""></button>
             </form>
         </div>
@@ -243,6 +249,6 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<script src="assets/js/scripts.js?v=c3df9d41006d716c3532ce15c9ab45b8"></script>
+<script src="assets/js/scripts.js?v=8677feb0e3e911210439d1beba96cc0a"></script>
 </body>
 </html>
