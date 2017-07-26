@@ -2,56 +2,59 @@
 
     <div class="background js-background"></div>
 
-    <div class="modal-content">
-        <div class="left-part">
-            <h2>Credit Card Details:</h2>
-            <input type="radio" class="radio" name="card" id="card">
-            <label for="card">MC ****9668</label>
-            <div class="new-card-wrap">
+    <div class="modal-wrap">
 
-                <div class="radiobutton js-open-form">
-                    <input type="radio" class="radio" name="card" id="new-card">
-                    <label for="new-card">New card</label>
-                </div>
-                <div class="wrap-checkbox">
-                    <input type="checkbox" class="checkbox" id="save">
-                    <label for="save">Save</label>
-                </div>
-            </div>
-            <form action="">
-                <div class="personal-about js-form">
+        <div class="modal-content">
+            <div class="left-part">
+                <h2>Credit Card Details:</h2>
+                <input type="radio" class="radio" name="card" id="card">
+                <label for="card">MC ****9668</label>
+                <div class="new-card-wrap">
 
-                    <input class="personal-info" type="text" placeholder="Number">
-                    <input class="personal-info" type="text" placeholder="Name on card">
-                    <div class="wrap-card-info">
-                        <div class="wrap-card-info--data">
-                            <input class="number-card" maxlength="2" type="text" placeholder="MM">
-                            <input class="number-card" maxlength="2" type="text" placeholder="YY">
+                    <div class="radiobutton js-open-form">
+                        <input type="radio" class="radio" name="card" id="new-card">
+                        <label for="new-card">New card</label>
+                    </div>
+                    <div class="wrap-checkbox">
+                        <input type="checkbox" class="checkbox" id="save">
+                        <label for="save">Save</label>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="personal-about js-form">
+
+                        <input class="personal-info" type="text" placeholder="Number">
+                        <input class="personal-info" type="text" placeholder="Name on card">
+                        <div class="wrap-card-info">
+                            <div class="wrap-card-info--data">
+                                <input class="number-card" maxlength="2" type="text" placeholder="MM">
+                                <input class="number-card" maxlength="2" type="text" placeholder="YY">
+                            </div>
+                            <input class="number-card-cvv" type="text" maxlength="3" placeholder="CVV">
                         </div>
-                        <input class="number-card-cvv" type="text" maxlength="3" placeholder="CVV">
-                    </div>
-                    <div class="wrap-example-number-card">
-                        <img src="./assets/img/card.png" alt="" class="example-number-card">
-                    </div>
+                        <div class="wrap-example-number-card">
+                            <img src="./assets/img/card.png" alt="" class="example-number-card">
+                        </div>
 
-                </div>
-                <div class="wrap-checkbox">
-                    <input type="checkbox" class="checkbox" id="payment">
-                    <label for="payment">Do a reccurement payment</label>
-                </div>
-                <button class="js-send-form btn btn_blue" type="submit">Checkout</button>
-                <button class="js-send-form btn btn_white" type="submit"><span class="text">or </span> Pay with <img
-                            src="./assets/img/paypal.png"
-                            alt=""></button>
-            </form>
-        </div>
-        <div class="right-part">
-            <img class="close-modal js-close-modal" src="./assets/img/x.png" alt="">
-            <div class="total">
-                <h3>Total:</h3>
-                <h1 class="js-total-price"> </h1>
+                    </div>
+                    <div class="wrap-checkbox">
+                        <input type="checkbox" class="checkbox" id="payment">
+                        <label for="payment">Do a reccurement payment</label>
+                    </div>
+                    <button class="js-send-form btn btn_blue" type="submit">Checkout</button>
+                    <button class="js-send-form btn btn_white" type="submit"><span class="text">or </span> Pay with <img
+                                src="./assets/img/paypal.png"
+                                alt=""></button>
+                </form>
+            </div>
+            <div class="right-part">
+                <img class="close-modal js-close-modal" src="./assets/img/x.png" alt="">
+                <div class="total">
+                    <h3>Total:</h3>
+                    <h1 class="js-total-price"></h1>
 
-                <h3 class="total__off">$359.98 off</h3>
+                    <h3 class="total__off">$359.98 off</h3>
+                </div>
             </div>
         </div>
     </div>
