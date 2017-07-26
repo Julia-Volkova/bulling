@@ -62,63 +62,62 @@
 //_______________________________________________________________________________________________________
 
 //custom radiobutton
-/* Base for label styling */
-.radio:not(:checked),
-.radio:checked {
-  position: absolute;
-  left: -9999px;
-}
-
-.radio:not(:checked) + label,
-.radio:checked + label {
-  position: relative;
-  padding-left: 1.95em;
-  cursor: pointer;
-}
-
-/* radio aspect */
-.radio:not(:checked) + label:before,
-.radio:checked + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border: 1px solid $grey_border;
-  background: $white;
-  border-radius: 50%;
-}
-
-/* checked mark aspect */
-.radio:not(:checked) + label:after,
-.radio:checked + label:after {
-  content: '.';
-  position: absolute;
-  top: -27px;
-  left: 2px;
-  font-size: 80px;
-  line-height: 24px;
-  color: $black;
-}
-
-/* checked mark aspect changes */
-.radio:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-
-.radio:checked + label:after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* disabled radio */
-.radio:disabled:not(:checked) + label:before,
-.radio:disabled:checked + label:before {
-  box-shadow: none;
-  border-color: #bbb;
-  background-color: #ddd;
+.radio-wrap {
+  margin: 13px 0 0;
+  &__inline {
+    margin-bottom: 10px;
+  }
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+     + .radio-label {
+       position: relative;
+       font-size: 18px;
+      &:before {
+        content: '';
+        border-radius: 50%;
+        border: 1px solid $input_border;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        margin-right: 10px;
+        transition: all 250ms ease;
+      }
+    }
+    &:checked {
+       + .radio-label {
+        &:after {
+          content: '';
+          background-color: $black;
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          top: 7px;
+          left: 7px;
+          border-radius: 50%;
+        }
+      }
+    }
+    //&:focus {
+    //  & + .radio-label {
+    //    &:before {
+    //      outline: none;
+    //      border-color: $color2;
+    //    }
+    //  }
+    //}
+    // + .radio-label {
+    //  &:empty {
+    //    &:before {
+    //      margin-right: 0;
+    //    }
+    //  }
+    //}
+  }
 }
 
 //________________________________________________________________________________________________________________
@@ -303,3 +302,4 @@ input[type="text"] {
 .title-container__switch_icon:checked + label:after {
   left: 26px;
 }
+

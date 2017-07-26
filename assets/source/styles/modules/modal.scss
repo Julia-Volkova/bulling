@@ -24,7 +24,7 @@
     left: 50%;
     top: 50%;
     margin-left: -322px;
-    margin-top: -165px;
+    margin-top: -172px;
     z-index: 5;
     .modal-content {
       z-index: 5;
@@ -38,24 +38,28 @@
       -moz-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
       box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
       .left-part {
-        padding: 30px;
+        padding: 22px 30px 30px 29px;
         width: 386px;
         h2 {
-          margin-bottom: 17px;
+          margin-bottom: 18px;
+          margin-left: 2px;
         }
-        .new-card-wrap {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: 15px 0 15px;
+        //.new-card-wrap {
+        //  display: flex;
+        //  justify-content: space-between;
+        //  align-items: center;
+        //  margin: 15px 0 15px;
+        //}
+        .save_btn {
+          float: right;
         }
         form {
           input[type="text"] {
-            padding: 15px 0 15px 10px;
             border-radius: 3px;
-            margin: 7px 0 7px;
             font-size: 18px;
             border: 1px solid $input_border;
+            margin: 5px 0 6px;
+            padding: 9px 0 14px 10px;
           }
           .personal-about {
             display: none;
@@ -68,7 +72,7 @@
               .wrap-card-info--data {
                 display: flex;
                 justify-content: space-between;
-                width: 120px;
+                width: 112px;
                 .number-card {
                   width: 50px;
                 }
@@ -94,13 +98,16 @@
             }
           }
           .wrap-checkbox {
-            margin: 10px 0 30px;
+            margin: 2px 0 31px;
           }
+        }
+        .btn_blue {
+          padding: 15px 20px 18px;
         }
       }
       .right-part {
-        width: 292px;
-        padding-left: 25px;
+        width: 257px;
+        padding-left: 29px;
         background-color: $bg_light_grey;
         position: relative;
         .close-modal {
@@ -115,7 +122,10 @@
         }
         .total {
           position: absolute;
-          bottom: 0;
+          bottom: 20px;
+          h1 {
+            margin-top: 3px;
+          }
           &__off {
             padding-top: 5px;
           }

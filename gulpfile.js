@@ -104,10 +104,10 @@ gulp.task('scss:build', function() {
 
 //Линтинг стилей
 gulp.task('styles:lint', function() {
-  gulp.src(paths.styles + '**/*.scss')
-    .pipe(sasslint())
-    .pipe(sasslint.format())
-    .pipe(plumber({errorHandler: onError}));
+  // gulp.src(paths.styles + '**/*.scss')
+  //   .pipe(sasslint())
+  //   .pipe(sasslint.format())
+  //   .pipe(plumber({errorHandler: onError}));
 });
 
 // Конвертация шрифтов в ксс

@@ -66,9 +66,11 @@ a {
 
 .total {
   position: absolute;
-  bottom: 27px;
+  bottom: 57px;
+  min-width: 208px;
   @media (max-width: 999px) {
     right: 20px;
+    min-width: 208px;
   }
   h1 {
     color: $blue;
@@ -82,6 +84,25 @@ a {
     padding-bottom: 11px;
   }
 
+  .wrap-coupone {
+    position: relative;
+    .btn_blue {
+      position: absolute;
+      transition: .8s;
+      top: 0;
+      &.btn-open {
+        top: 50px;
+      }
+    }
+    .coupone-number {
+      margin: 0 0 20px;
+      padding: 8px 0 8px 8px;
+      border-radius: 3px;
+      outline: none;
+      width: 100%;
+      border: 1px solid $input_border;
+    }
+  }
   .coupone {
     font-size: 13px;
     color: $grey_text;
@@ -92,20 +113,6 @@ a {
     &:hover {
       color: $green;
       border-bottom: 1px dotted $green;
-    }
-  }
-  .coupone-number {
-    display: none;
-    margin: 0 0 20px;
-    padding: 8px 0 8px 8px;
-    border-radius: 3px;
-    outline: none;
-    width: 100%;
-    border: 1px solid $input_border;
-
-    &.show {
-      display: block;
-      transition: 2s;
     }
   }
 }

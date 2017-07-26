@@ -2,24 +2,28 @@
 
     <div class="background js-background"></div>
 
-    <div class="modal-wrap">
+    <div class="modal-wrap js-modal-wrap">
 
         <div class="modal-content">
             <div class="left-part">
-                <h2>Credit Card Details:</h2>
-                <input type="radio" class="radio" name="card" id="card">
-                <label for="card">MC ****9668</label>
-                <div class="new-card-wrap">
 
-                    <div class="radiobutton js-open-form">
-                        <input type="radio" class="radio" name="card" id="new-card">
-                        <label for="new-card">New card</label>
-                    </div>
-                    <div class="wrap-checkbox">
-                        <input type="checkbox" class="checkbox" id="save">
-                        <label for="save">Save</label>
-                    </div>
+                <h2>Credit Card Details:</h2>
+
+                <div class="radio-wrap">
+                    <input type="radio" name="card" id="card">
+                    <label class="radio-label js-close-form" for="card">MC ****9668</label>
                 </div>
+
+
+                <div class="radio-wrap radio-wrap__inline">
+                    <input type="radio" name="card" id="new-card">
+                    <label class="radio-label js-open-form" for="new-card">New card</label>
+
+                    <input type="checkbox" class="checkbox" id="save">
+                    <label class="save_btn" for="save">Save</label>
+                </div>
+                <div class="clearfix"></div>
+
                 <form action="">
                     <div class="personal-about js-form">
 
@@ -47,6 +51,7 @@
                                 alt=""></button>
                 </form>
             </div>
+
             <div class="right-part">
                 <img class="close-modal js-close-modal" src="./assets/img/x.png" alt="">
                 <div class="total">

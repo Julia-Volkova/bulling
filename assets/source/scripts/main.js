@@ -1,10 +1,13 @@
 var btn_open_modal = document.querySelectorAll('.js-modal-open');
 var modal = document.querySelector('.js-modal');
+var modal_wrap = document.querySelector('.js-modal-wrap');
 var background = document.querySelector('.js-background');
 var open_coupone_input = document.querySelector('.js-open-coupone-input');
+var open_coupone_btn = document.querySelector('.js-open-coupone-btn');
 var coupone_number = document.querySelector('.js-coupone-number');
 var close_modal = document.querySelector('.js-close-modal');
 var open_new_card = document.querySelector('.js-open-form');
+var close_new_card = document.querySelector('.js-close-form');
 var new_card = document.querySelector('.js-form');
 var payment = document.querySelector('#payment');
 var initial_state = {
@@ -27,26 +30,43 @@ btn_open_modal.forEach(function (element) {
     element.addEventListener('click', function (e) {
         e.preventDefault();
         modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
     });
 });
 
 open_coupone_input.addEventListener('click', function (e) {
     e.preventDefault();
-    coupone_number.classList.toggle('show');
+    open_coupone_btn.classList.toggle('btn-open');
 });
 
 close_modal.addEventListener('click', function () {
     modal.classList.remove('open');
+    document.body.style.overflow = 'auto';
 });
 
-open_new_card.addEventListener('click', function (e) {
+open_new_card.addEventListener('click', function () {
     new_card.classList.add('show');
+    modal_wrap.style.marginTop = '-295px';
 });
+
+close_new_card.addEventListener('click', function () {
+    new_card.classList.remove('show');
+    modal_wrap.style.marginTop = '-172px';
+});
+
+background.addEventListener('click', function () {
+    modal.classList.remove('open');
+    document.body.style.overflow = 'auto';
+});
+
+console.log(modal.classList.contains('open'));
+
+
+
 
 
 license_reduction.addEventListener('click', function () {
     changeCount(-1);
-
 });
 
 license_raising.addEventListener('click', function () {

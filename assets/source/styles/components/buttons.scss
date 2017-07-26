@@ -23,8 +23,10 @@
   &_white {
     background-color: $white;
     border: 1px solid $blue_border;
-    margin-top: 17px;
     color: $blue_border;
+    margin-top: 16px;
+    padding-top: 13px;
+    padding-bottom: 15px;
     &:hover {
       background-color: $blue;
       color: $white;

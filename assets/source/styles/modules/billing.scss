@@ -157,13 +157,13 @@
       @media(max-width: 999px) {
         display: block;
         width: 100%;
-        min-height: 270px;
+        min-height: 320px;
       }
 
       table {
         width: 100%;
         @media(max-width: 999px) {
-         width: 300px;
+         width: 208px;
         }
         td {
           color: $grey_text;
