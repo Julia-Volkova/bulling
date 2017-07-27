@@ -232,6 +232,8 @@
           &_img {
             display: flex;
             align-items: center;
+            position: relative;
+            bottom: 4px;
           }
         }
       }

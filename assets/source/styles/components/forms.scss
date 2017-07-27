@@ -169,10 +169,10 @@
     }
 
     #border {
-      width: 20%;
+      width: 14%;
       height: 141px;
       position: absolute;
-      top: -44px;
+      top: -49px;
       border: 2px solid $green;
       transition: 0.5s .05s ease-in-out;
     }
@@ -205,23 +205,23 @@
     }
   }
   input#radio-0:checked ~ #border {
-    //left: -5%;
-  }
+    left: -4%;
+     }
   input#radio-1:checked ~ #border {
-    transform: translateX(0%);
-    //left: 19%;
+    //transform: translateX(0%);
+    left: 19%;
   }
   input#radio-2:checked ~ #border {
-    transform: translateX(40%);
-    //left: 43%;
+    //transform: translateX(40%);
+    left: 43%;
   }
   input#radio-3:checked ~ #border {
-    transform: translateX(50%);
-    //left: 67%;
+    //transform: translateX(50%);
+    left: 67%;
   }
   input#radio-4:checked ~ #border {
-    transform: translateX(75%);
-    //left: 90%;
+    //transform: translateX(75%);
+    left: 90%;
   }
 }
 
