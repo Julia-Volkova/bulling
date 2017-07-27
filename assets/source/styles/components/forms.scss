@@ -169,12 +169,15 @@
     }
 
     #border {
-      width: 106px;
+      width: 20%;
       height: 141px;
       position: absolute;
       top: -44px;
       border: 2px solid $green;
       transition: 0.5s .05s ease-in-out;
+    }
+    .radiobutton {
+      width: 20%;
     }
 
     .radiobutton:checked + label {
@@ -194,31 +197,31 @@
       left: 10px;
     }
 
-    input#radio-0:checked ~ #border {
-      left: -5%;
-    }
-    input#radio-1:checked ~ #border {
-      //transform: translateX(0%);
-      left: 19%;
-    }
-    input#radio-2:checked ~ #border {
-      //transform: translateX(40%);
-      left: 43%;
-    }
-    input#radio-3:checked ~ #border {
-      //transform: translateX(50%);
-      left: 67%;
-    }
-    input#radio-4:checked ~ #border {
-      //transform: translateX(75%);
-      left: 90%;
-    }
     input[type="radio"] {
       &:not(:checked),
       &:checked {
         display: none;
       }
     }
+  }
+  input#radio-0:checked ~ #border {
+    //left: -5%;
+  }
+  input#radio-1:checked ~ #border {
+    transform: translateX(0%);
+    //left: 19%;
+  }
+  input#radio-2:checked ~ #border {
+    transform: translateX(40%);
+    //left: 43%;
+  }
+  input#radio-3:checked ~ #border {
+    transform: translateX(50%);
+    //left: 67%;
+  }
+  input#radio-4:checked ~ #border {
+    transform: translateX(75%);
+    //left: 90%;
   }
 }
 
