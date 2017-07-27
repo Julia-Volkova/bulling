@@ -37,7 +37,6 @@
   font-size: 20px;
   line-height: 0.8;
   color: $black;
-  transition: all .2s;
 }
 
 /* checked mark aspect changes */
@@ -70,9 +69,9 @@
   input[type="radio"] {
     position: absolute;
     opacity: 0;
-     + .radio-label {
-       position: relative;
-       font-size: 18px;
+    + .radio-label {
+      position: relative;
+      font-size: 18px;
       &:before {
         content: '';
         border-radius: 50%;
@@ -85,11 +84,10 @@
         cursor: pointer;
         text-align: center;
         margin-right: 10px;
-        transition: all 250ms ease;
       }
     }
     &:checked {
-       + .radio-label {
+      + .radio-label {
         &:after {
           content: '';
           background-color: $black;
@@ -101,6 +99,11 @@
           border-radius: 50%;
         }
       }
+    }
+  }
+  input[type="radio"]#new-card:checked {
+    + .personal-about {
+      display: block;
     }
   }
 }
@@ -177,7 +180,6 @@
       border: 2px solid $green;
       padding: 16px;
       top: -9px;
-      transition: padding .2s;
     }
 
     .radiobutton:checked + label:after {
