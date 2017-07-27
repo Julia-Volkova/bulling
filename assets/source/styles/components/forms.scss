@@ -61,11 +61,7 @@
 //_______________________________________________________________________________________________________
 
 //custom radiobutton
-.radio-wrap {
-  margin: 13px 0 0;
-  &__inline {
-    margin-bottom: 10px;
-  }
+.new-card-info {
   input[type="radio"] {
     position: absolute;
     opacity: 0;
@@ -85,6 +81,14 @@
         text-align: center;
         margin-right: 10px;
       }
+      &.card {
+        display: block;
+        margin: 0 0 13px;
+      }
+      &.new-card {
+        display: inline-block;
+        margin: 0 0 10px;
+      }
     }
     &:checked {
       + .radio-label {
@@ -101,10 +105,8 @@
       }
     }
   }
-  input[type="radio"]#new-card:checked {
-    + .personal-about {
-      display: block;
-    }
+  #new-card:checked ~ .personal-about {
+    display: block;
   }
 }
 
@@ -284,4 +286,51 @@ input[type="text"] {
 .title-container__switch_icon:checked + label:after {
   left: 26px;
 }
+//____________________________________________________________________________________________________________________
 
+// Form for new card information
+.new-card-info {
+  input[type="text"] {
+    border-radius: 3px;
+    font-size: 18px;
+    border: 1px solid $input_border;
+    margin: 5px 0 6px;
+    padding: 9px 0 14px 10px;
+  }
+  .personal-about {
+    display: none;
+    .wrap-card-info {
+      display: flex;
+      justify-content: space-between;
+      .wrap-card-info--data {
+        display: flex;
+        justify-content: space-between;
+        width: 112px;
+        .number-card {
+          width: 50px;
+        }
+      }
+      .number-card-cvv {
+        width: 74px;
+        position: relative;
+      }
+    }
+    .wrap-example-number-card {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      .example-number-card {
+        width: 45px;
+        height: 30px;
+        display: block;
+        margin-right: 15px;
+      }
+    }
+    .personal-info {
+      width: 100%;
+    }
+  }
+  .wrap-checkbox {
+    margin: 2px 0 31px;
+  }
+}

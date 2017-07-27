@@ -54,16 +54,6 @@ close_modal.addEventListener('click', function () {
     document.body.style.overflow = 'auto';
 });
 
-open_new_card.addEventListener('click', function () {
-    new_card.classList.add('show');
-    modal_wrap.style.marginTop = '-295px';
-});
-//
-// close_new_card.addEventListener('click', function () {
-//     new_card.classList.remove('show');
-//     modal_wrap.style.marginTop = '-172px';
-// });
-
 background.addEventListener('click', function () {
     modal.classList.remove('open');
     document.body.style.overflow = 'auto';
@@ -95,8 +85,8 @@ function changeCount(val) {
 function calculate() {
     const time = document.querySelector('.js-time-change:checked').dataset.time;
     lisence_count = initial_state.license;
-    var current_sale = [];
-    console.log(current_sale);
+    var sale_cur;
+    var arr_sale = [];
 
     license_count_value.forEach(function (el) {
         el.innerHTML = lisence_count;
@@ -112,8 +102,8 @@ function calculate() {
 
     discount.forEach(function (el) {
         var months = el.dataset.time;
-        current_sale = Math.ceil(lisence_count * sale[months]);
-        el.innerHTML = '$' + current_sale + ' off';
+        sale_cur = Math.ceil(lisence_count * sale[months]);
+        el.innerHTML = '$' + sale_cur + ' off';
     });
 
     discount_total.forEach(function (el) {
@@ -128,15 +118,11 @@ function calculate() {
     });
 
     total.forEach(function (element, i) {
-        var result;
         if (time == 1) {
-            result = +'0';
+            element.innerHTML = '$' + '0';
+        } else {
+            element.innerHTML = '$' + (time * lisence_count * initial_state.cost - sale[time] * lisence_count).toFixed(2);
         }
-        else {
-            result = (time * lisence_count * initial_state.cost).toFixed(2);
-            result -= current_sale[i];
-        }
-        element.innerHTML = '$' + result;
     });
 }
 

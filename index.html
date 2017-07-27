@@ -4,7 +4,7 @@
   <title>Пробное</title>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="assets/css/style.css?v=1143777f089caf2feed2b9d35a60ab68" rel="stylesheet">
+    <link href="assets/css/style.css?v=d41d8cd98f00b204e9800998ecf8427e" rel="stylesheet">
 </head>
 <body>
 
@@ -208,24 +208,21 @@
 
                 <h2>Credit Card Details:</h2>
 
-                <div class="radio-wrap">
+                <form class="new-card-info" action="">
                     <input type="radio" name="card" id="card">
-                    <label class="radio-label js-close-form" for="card">MC ****9668</label>
-                </div>
+                    <label class="radio-label card js-close-form" for="card">MC ****9668</label>
 
-
-                <div class="radio-wrap radio-wrap__inline">
                     <input type="radio" name="card" id="new-card">
-                    <label class="radio-label js-open-form" for="new-card">New card</label>
+                    <label class="radio-label new-card js-open-form" for="new-card">New card</label>
 
+                    
                     <input type="checkbox" class="checkbox" id="save">
                     <label class="save_btn" for="save">Save</label>
-                </div>
+
                 <div class="clearfix"></div>
 
-                <form action="">
-                    <div class="personal-about js-form">
 
+                    <div class="personal-about js-form" for="new-card">
                         <input class="personal-info js-number js-number-new-card"
                                pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" maxlength="19" type="text" placeholder="Number">
                         <input class="personal-info" type="text" placeholder="Name on card">
@@ -233,6 +230,7 @@
                         <div class="wrap-card-info">
                             <div class="wrap-card-info--data">
                                 <input class="number-card js-number js-input-month" maxlength="2" type="text" placeholder="MM">
+
                                 <input class="number-card js-number" maxlength="2" type="text" placeholder="YY">
                             </div>
                             <input class="number-card-cvv js-number" type="text" maxlength="3" placeholder="CVV">
@@ -269,6 +267,6 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<script src="assets/js/scripts.js?v=211d2983c8da8d74f2267ddcdbe28ce5"></script>
+<script src="assets/js/scripts.js?v=81021c9afcd845e5f59f50d89d24323e"></script>
 </body>
 </html>
