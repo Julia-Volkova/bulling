@@ -76,6 +76,10 @@
           justify-content: space-between;
           align-items: center;
           float: right;
+          .license-count {
+            width: 25px;
+          text-align: center;
+          }
           .licenses-size {
             width: 37px;
             height: 37px;
@@ -108,7 +112,7 @@
           border-left: 10px solid transparent;
           border-right: 10px solid transparent;
           position: absolute;
-          right: 120px;
+          right: 147px;
           &__green {
             border-bottom: 10px solid $green_border;
             top: -11px;

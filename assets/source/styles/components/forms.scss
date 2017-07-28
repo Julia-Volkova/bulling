@@ -121,16 +121,16 @@
   &:before {
     content: '';
     position: absolute;
-    width: 94%;
+    width: 89%;
     height: 5px;
     top: 69px;
-    left: 3%;
+    left: 5%;
     background-color: $bg_light_grey;
     z-index: 0;
   }
   .tariff {
     text-align: center;
-    width: 11%;
+    width: 14%;
     span {
       display: block;
     }
@@ -148,9 +148,9 @@
     }
   }
   .switch {
-    width: 94%;
+    width: 89%;
     position: absolute;
-    left: 3%;
+    left: 5%;
     top: 62px;
     display: flex;
     justify-content: space-between;
@@ -185,6 +185,7 @@
       border: 2px solid $green;
       padding: 16px;
       top: -9px;
+      left: -1px;
     }
 
     .radiobutton:checked + label:after {
@@ -206,7 +207,7 @@
     }
   }
   input#radio-0:checked ~ #border {
-    left: -4%;
+    left: -5%;
      }
   input#radio-1:checked ~ #border {
     //transform: translateX(0%);
