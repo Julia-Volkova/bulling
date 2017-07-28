@@ -4,6 +4,9 @@
   min-height: 100%;
   position: relative;
   z-index: 0;
+  &.scroll {
+    overflow-y: scroll;
+  }
 
   .title-container {
     display: flex;

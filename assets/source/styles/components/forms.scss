@@ -189,12 +189,13 @@
 
     .radiobutton:checked + label:after {
       content: '';
-      background: url(../img/v.png) no-repeat;
-      width: 34px;
-      height: 34px;
+      background: url(../img/v.svg) no-repeat;
+      background-size: 16px;
+      width: 17px;
+      height: 17px;
       position: absolute;
       top: 10px;
-      left: 10px;
+      left: 9px;
     }
 
     input[type="radio"] {
