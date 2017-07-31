@@ -24,7 +24,7 @@
 // var discount_total = qsAll('.js-total-sale');
 // var total = qsAll('.js-total-price');
 // var license = document.querySelector('.js-license-count');
-// var lisence_count;
+// var license_count;
 // var license_reduction = document.querySelector('.js-reduction');
 // var license_raising = document.querySelector('.js-raising');
 // var time_price = qsAll('.js-time-price');
@@ -71,33 +71,33 @@
 //
 // function calculate() {
 //     const time = document.querySelector('.js-time-change:checked').dataset.time;
-//     lisence_count = initial_state.license;
+//     license_count = initial_state.license;
 //     var sale_cur;
 //     var arr_sale = [];
 //
 //     license_count_value.forEach(function (el) {
-//         el.innerHTML = lisence_count;
+//         el.innerHTML = license_count;
 //     });
 //
 //     time_price.forEach(function (el, i) {
 //         if (el.dataset.time == 1) {
 //             el.innerHTML = '$' + '0';
 //         } else {
-//             el.innerHTML = '$' + (el.dataset.time * lisence_count * initial_state.cost).toFixed(2);
+//             el.innerHTML = '$' + (el.dataset.time * license_count * initial_state.cost).toFixed(2);
 //         }
 //     });
 //
 //     discount.forEach(function (el) {
 //         var months = el.dataset.time;
-//         sale_cur = Math.ceil(lisence_count * sale[months]);
+//         sale_cur = Math.ceil(license-count * sale[months]);
 //         el.innerHTML = '$' + sale_cur + ' off';
 //     });
 //
 //     discount_total.forEach(function (el) {
 //         var result;
 //
-//         if (lisence_count >= 3) {
-//             result = Math.ceil(lisence_count * sale[time]);
+//         if (license_count >= 3) {
+//             result = Math.ceil(license_count * sale[time]);
 //         } else {
 //             result = +'0';
 //         }
@@ -108,7 +108,7 @@
 //         if (time == 1) {
 //             element.innerHTML = '$' + '0';
 //         } else {
-//             element.innerHTML = '$' + (time * lisence_count * initial_state.cost - sale[time] * lisence_count).toFixed(2);
+//             element.innerHTML = '$' + (time * license_count * initial_state.cost - sale[time] * license_count).toFixed(2);
 //         }
 //     });
 // }

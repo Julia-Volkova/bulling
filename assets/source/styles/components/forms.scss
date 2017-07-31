@@ -11,6 +11,7 @@
   position: relative;
   padding-left: 1.95em;
   cursor: pointer;
+  letter-spacing: -0.03em;
 }
 
 /* checkbox aspect */
@@ -127,6 +128,10 @@
     left: 5%;
     background-color: $bg_light_grey;
     z-index: 0;
+    @media screen and (min-width: 1400px) and (max-width: 1900px) {
+      width: 88%;
+      left: 6%;
+    }
   }
   .tariff {
     text-align: center;
@@ -154,6 +159,10 @@
     top: 62px;
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: 1400px) and (max-width: 1900px) {
+      width: 88%;
+      left: 6%;
+    }
     label {
       display: inline-block;
       width: 20px;
@@ -175,6 +184,9 @@
       top: -49px;
       border: 2px solid $green;
       transition: 0.5s .05s ease-in-out;
+      @media screen and (min-width: 1400px) and (max-width: 1900px) {
+        width: 10%;
+      }
     }
     .radiobutton {
       width: 20%;
@@ -208,22 +220,37 @@
   }
   input#radio-0:checked ~ #border {
     left: -5%;
-     }
+    @media screen and (min-width:1400px) and (max-width: 1900px) {
+      left: -4%;
+    }
+  }
   input#radio-1:checked ~ #border {
     //transform: translateX(0%);
     left: 19%;
+    @media screen and (min-width:1400px) and (max-width: 1900px) {
+      left: 21%;
+    }
   }
   input#radio-2:checked ~ #border {
     //transform: translateX(40%);
     left: 43%;
+    @media screen and (min-width:1400px) and (max-width: 1900px) {
+      left: 45%;
+    }
   }
   input#radio-3:checked ~ #border {
     //transform: translateX(50%);
     left: 67%;
+    @media screen and (min-width:1400px) and (max-width: 1900px) {
+      left: 69%;
+    }
   }
   input#radio-4:checked ~ #border {
     //transform: translateX(75%);
     left: 90%;
+    @media screen and (min-width:1400px) and (max-width: 1900px) {
+      left: 94%;
+    }
   }
 }
 
@@ -291,6 +318,7 @@ input[type="text"] {
 .title-container__switch_icon:checked + label:after {
   left: 26px;
 }
+
 //____________________________________________________________________________________________________________________
 
 // Form for new card information

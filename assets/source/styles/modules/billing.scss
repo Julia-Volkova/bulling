@@ -78,7 +78,7 @@
           float: right;
           .license-count {
             width: 25px;
-          text-align: center;
+            text-align: center;
           }
           .licenses-size {
             width: 37px;
@@ -159,43 +159,67 @@
       display: inline-block;
       min-height: 617px;
       vertical-align: top;
-      padding: 18px 20px 27px 21px;
+      padding: 26px 20px 27px 21px;
       position: relative;
       @media(max-width: 999px) {
         display: block;
         width: 100%;
         min-height: 320px;
       }
-
-      table {
-        width: 100%;
-        @media(max-width: 999px) {
-         width: 208px;
-        }
-        td {
-          color: $grey_text;
-          padding: 8px 0 4px;
-        }
-        .total-text {
-          font-size: 24px;
-        }
-
-        .table-title {
-          color: $black;
-        }
-
-        .special-element {
-          width: 95px;
-        }
-
-        .right-part {
-          text-align: right;
-        }
-        .end-first-parts {
-          border-bottom: 1px dotted $grey_dotted;
-        }
+      .text-right {
+        text-align: right;
       }
+      .block {
+        display: block;
+      }
+      span {
+        color: $grey_text;
+        padding-top: 12px;
+      }
+      &__title {
+        font-size: 15px;
+        color: $black;
+        font-weight: 400;
+      }
+      &__calculation {
+        display: flex;
+        justify-content: space-between;
+      }
+      h2 {
+        text-align: right;
+        color: $grey_text;
+        padding-top: 11px;
+      }
+      //table {
+      //  width: 100%;
+      //  @media(max-width: 999px) {
+      //   width: 208px;
+      //  }
+      //  td {
+      //    color: $grey_text;
+      //    padding: 8px 0 4px;
+      //  }
+      //  .total-text {
+      //    font-size: 24px;
+      //  }
+      //
+      //  .table-title {
+      //    color: $black;
+      //  }
+      //
+      //  .special-element {
+      //    width: 95px;
+      //  }
+      //
+      //  .right-part {
+      //    text-align: right;
+      //  }
+      //  .end-first-parts {
+      //    border-bottom: 1px dotted $grey_dotted;
+      //  }
+      //}
     }
+
     .orders {
       width: 100%;
       position: relative;
