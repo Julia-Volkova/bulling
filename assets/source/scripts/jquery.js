@@ -131,18 +131,18 @@ $(function () {
 
     // Form Validation
     // Month
-    var input_month = $('.js-input-month');
-    var arr = [];
-    input_month.change(function () {
-        // var value = input_month.val();
-        // var result = value.match(/\b([0-9]|1[0-2])\b/g);
-        // console.log(result);
-        if(input_month.val() > 12) {
-            input_month.attr('disabled');
-        }
-    });
+    // var input_month = $('.js-input-month');
+    // var arr = [];
+    // input_month.keydown(function () {
+    //     // var value = input_month.val();
+    //     // var result = value.match(/\b([0-9]|1[0-2])\b/g);
+    //     // console.log(result);
+    //     if (input_month.val() > 12) {
+    //         input_month.preventDefault();
+    //     }
+    // });
 
-// Number credit-card
+    // Number credit-card
     var input_number_new_card = document.querySelector('.js-number-new-card');
     input_number_new_card.addEventListener('keypress', formatCardCode, false);
 
@@ -151,5 +151,37 @@ $(function () {
         cardCode = cardCode != '' ? cardCode.match(/.{1,4}/g).join(' ') : '';
         this.value = cardCode;
     }
+
+    // Only number in input
+    $('.js-number').keydown(function (event) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || (event.keyCode == 65 && event.ctrlKey === true) || (event.keyCode >= 35 && event.keyCode <= 39)) {
+            return;
+        }
+        else {
+            if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                event.preventDefault();
+            }
+        }
+    });
+
+    // Month
+    $('.js-input-month').keydown(function (e) {
+        if (+e.key == 0 || +e.key == 1) {
+            getInputValue();
+        }
+    });
+
+    function getInputValue() {
+        $('.js-input-month').keydown(function (e) {
+            var value = $('.js-input-month').val();
+            if (+(value + e.key) > 12) {
+                e.preventDefault();
+            }
+        });
+    }
 });
+
+
+
+
 
