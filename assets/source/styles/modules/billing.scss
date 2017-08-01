@@ -9,9 +9,12 @@
   }
 
   .title-container {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     margin-bottom: 25px;
+    -webkit-align-items: center;
     align-items: center;
 
     &__title {
@@ -26,9 +29,12 @@
       }
     }
     &__switch {
+      display: -webkit-flex;
       display: flex;
       justify-content: space-between;
+      -webkit-justify-content: space-between;
       align-items: flex-start;
+      -webkit-align-items: flex-start;
       h3 {
         padding: 0 20px 0 0;
       }
@@ -36,7 +42,9 @@
   }
 
   .container {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     min-height: 620px;
     > * {
@@ -71,9 +79,12 @@
         }
 
         &__price {
+          display: -webkit-flex;
           display: flex;
           width: 216px;
+          -webkit-justify-content: space-between;
           justify-content: space-between;
+          -webkit-align-items: center;
           align-items: center;
           float: right;
           .license-count {
@@ -83,6 +94,7 @@
           .licenses-size {
             width: 37px;
             height: 37px;
+            color: $black;
             background-color: $milk;
             outline: none;
             border: 1px solid $grey_border;
@@ -156,14 +168,20 @@
     .additional-block {
       background-color: $bg_light_grey;
       width: 249px;
-      display: inline-block;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
       min-height: 617px;
-      vertical-align: top;
-      padding: 26px 20px 27px 21px;
-      position: relative;
+      padding: 26px 20px 67px 21px;
       @media(max-width: 999px) {
-        display: block;
         width: 100%;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
         min-height: 320px;
       }
       &__wrap-calculation {
@@ -190,7 +208,9 @@
         font-weight: 400;
       }
       &__calculation {
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
       }
     }
@@ -218,7 +238,9 @@
         margin: 18px 0 23px;
       }
       .order {
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
         width: 70%;
         &__item {
@@ -236,7 +258,9 @@
             }
           }
           &_img {
+            display: -webkit-flex;
             display: flex;
+            -webkit-align-items: center;
             align-items: center;
             position: relative;
             bottom: 4px;

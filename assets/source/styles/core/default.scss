@@ -30,7 +30,7 @@ body {
   font-family: $PTSans;
   font-weight: 400;
   height: 100%;
-  width: 100%;
+  min-width: 751px;
   overflow: auto;
   &.overflow {
     overflow: hidden;
@@ -70,12 +70,9 @@ a {
 }
 
 .total {
-  position: absolute;
-  bottom: 57px;
   min-width: 208px;
   @media (max-width: 999px) {
-    right: 20px;
-    min-width: 208px;
+   width: 208px;
   }
   h1 {
     color: $blue;
@@ -96,6 +93,7 @@ a {
       position: absolute;
       transition: .8s;
       top: 0;
+      letter-spacing: -0.01em;
       &.btn-open {
         top: 50px;
       }
@@ -121,6 +119,13 @@ a {
       border-bottom: 1px dotted $green;
     }
   }
+}
+
+input[type="text"],
+input[type="checkbox"],
+label {
+  font-size: 100%;
+  padding: 0;
 }
 
 

@@ -59,7 +59,6 @@ $(function () {
 
     function changeCount(val) {
         initial_state.license += val;
-        console.log(initial_state.license);
         $('.js-license-count').text(initial_state.license);
         calculate();
     }
@@ -171,13 +170,18 @@ $(function () {
         }
     });
 
+    $('.js-input-month').keydown(function (e) {
+        var value = $('.js-input-month').val();
+        console.log(+value);
+        if (+(value + e.key) > 12) {
+            e.preventDefault();
+        }
+        else if (+value > 2) {
+            $('.js-input-month').val().length = 1;
+        }
+    });
+
     function getInputValue() {
-        $('.js-input-month').keydown(function (e) {
-            var value = $('.js-input-month').val();
-            if (+(value + e.key) > 12) {
-                e.preventDefault();
-            }
-        });
     }
 });
 
