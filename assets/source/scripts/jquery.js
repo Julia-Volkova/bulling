@@ -80,7 +80,7 @@ $(function () {
             $('.js-period-in-day').text(365);
         }
 
-        if (time == 24) {
+        else if (time == 24) {
             $('.js-period-in-day').text(365 * 2);
         }
 
@@ -165,14 +165,7 @@ $(function () {
 
     // Month
     $('.js-input-month').keydown(function (e) {
-        if (+e.key == 0 || +e.key == 1) {
-            getInputValue();
-        }
-    });
-
-    $('.js-input-month').keydown(function (e) {
         var value = $('.js-input-month').val();
-        console.log(+value);
         if (+(value + e.key) > 12) {
             e.preventDefault();
         }
@@ -180,12 +173,4 @@ $(function () {
             $('.js-input-month').val().length = 1;
         }
     });
-
-    function getInputValue() {
-    }
 });
-
-
-
-
-
